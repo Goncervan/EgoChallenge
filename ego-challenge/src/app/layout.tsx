@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import './main.scss'
-
-const inter = Inter({ subsets: ["latin"] });
+import "./main.scss";
+import { Navbar } from "@/components/navbar/navbar";
 
 export const metadata: Metadata = {
   title: "Ego Challenge",
@@ -16,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="body">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
