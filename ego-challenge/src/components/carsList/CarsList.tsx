@@ -3,6 +3,7 @@ import React from "react";
 import "./CarsList.styles.scss";
 import { ListFilter } from "../listFilters/ListFilter";
 import { useCarListController } from "./CarList.controller";
+import { Card } from "../carCard/Card";
 export const CarsList = () => {
   const controller = useCarListController();
   console.log(controller.cars, "aca");
@@ -24,7 +25,7 @@ export const CarsList = () => {
         />
       </div>
       {controller.cars?.map((car) => (
-        <h1 key={car.id}>{car.name}</h1>
+        <Card key={car.id} car={car} />
       ))}
     </div>
   );
