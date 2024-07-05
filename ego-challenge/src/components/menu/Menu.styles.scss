@@ -74,3 +74,15 @@
 .menu_list:last-of-type {
   border-bottom: none;
 }
+
+@media screen and (max-width: 768px) {
+  .lists_container {
+    padding: 20px 40px;
+  }
+  .menu_list:nth-child(1) {
+    margin-top: 180px;
+  }
+  .menu_close {
+    margin-right: 0px;
+  }
+}

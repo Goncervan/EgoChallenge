@@ -53,3 +53,12 @@
   border: none;
   margin-right: 40px;
 }
+
+@media screen and (max-width: 768px) {
+  .links_container {
+    display: none;
+  }
+  .menu{
+    margin-right: 0px;
+  }
+}
