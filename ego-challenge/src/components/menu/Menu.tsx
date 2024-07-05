@@ -28,19 +28,19 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
           <li>Reviews y Comunidad</li>
         </ul>
         <div className="divider" />
-        <ul>
+        <ul className="menu_list">
           <li>Toyota Mobility Service</li>
           <li>Toyota Gazoo Racing</li>
           <li>Toyota Híbridos</li>
         </ul>
         <div className="divider" />
-        <ul>
+        <ul className="menu_list">
           <li>Concesionarios</li>
           <li>Test Drive</li>
           <li>Contacto</li>
         </ul>
         <div className="divider" />
-        <ul>
+        <ul className="menu_list">
           <li>Actividades</li>
           <li>Servicios al Cliente</li>
           <li>Ventas Especiales</li>
