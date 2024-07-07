@@ -1,4 +1,4 @@
-type segments = "SUVs" | "Pickups y Comerciales" | "Hatchback" | "Sedan";
+type segments = "SUVs" | "Pickups y Comerciales" | "Hatchback" | "Sedan" | "";
 
 export interface carInterface {
   id: number;

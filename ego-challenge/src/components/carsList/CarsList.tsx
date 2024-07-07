@@ -11,7 +11,6 @@ export const CarsList = () => {
   return (
     <div className="container">
       <h1 className="title">Descubrí todos los modelos</h1>
-
       <div className="filters_container">
         <ListFilter
           title="Filtrar por"
@@ -23,10 +22,12 @@ export const CarsList = () => {
           options={[{ name: "Modelo", value: "model" }]}
           onSelect={(value) => console.log(value)}
         />
-      </div>
+          </div>
+          <div className="cars_container">  
       {controller.cars?.map((car) => (
-        <Card key={car.id} car={car} />
-      ))}
+          <Card key={car.id} car={car} />
+        ))}
+        </div>
     </div>
   );
 };

@@ -13,6 +13,7 @@
   flex-direction: column;
   padding: 0px;
   background-color: $background-color;
+  z-index: 1000;
 }
 .menu_header {
   display: flex;

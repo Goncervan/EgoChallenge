@@ -23,8 +23,10 @@ export const Navbar = () => {
             Modelos
           </Link>
           <Link
-            className={pathname === "/model-detail" ? "active_link" : "link"}
-            href="/model-detail"
+            className={
+              pathname.includes("/car-detail") ? "active_link" : "link"
+            }
+            href="/car-detail"
           >
             Ficha de modelo
           </Link>
@@ -33,7 +35,7 @@ export const Navbar = () => {
       <button className="menu" onClick={toggleModal}>
         Menú <MenuIcon />
       </button>
-      <Menu isOpen={isModalOpen} onClose={toggleModal}/>
+      <Menu isOpen={isModalOpen} onClose={toggleModal} />
     </nav>
   );
 };

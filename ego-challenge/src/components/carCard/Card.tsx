@@ -1,13 +1,25 @@
-import { carInterface } from '@/interfaces'
-import Image from 'next/image'
-import React from 'react'
-
+import { carInterface } from "@/interfaces";
+import Image from "next/image";
+import React from "react";
+import "./card.styles.scss";
+import Link from "next/link";
 export const Card = ({ car }: { car: carInterface }) => {
   return (
-      <div>
-          <h4>{car.name}</h4>
-          <h5>{car.year} | ${car.price}</h5>
-          <Image src={car.thumbnail} alt={car.name} width={200} height={200} />
-    </div>
-  )
-}
+    <Link href={`/car-detail/${car.id}`} className="link">
+      <div className="card">
+        <h4 className="card_title">{car.name}</h4>
+        <h5 className="card_info">
+          {car.year} | ${car.price.toLocaleString()}
+        </h5>
+        <div className="image_container">
+          <Image
+            src={car.thumbnail}
+            objectFit="contain"
+            layout="fill"
+            alt={car.name}
+          />
+        </div>
+      </div>
+    </Link>
+  );
+};

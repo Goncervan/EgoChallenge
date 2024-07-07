@@ -1,0 +1,50 @@
+@import "../../styles/variables.scss";
+
+.link {
+    text-decoration: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 30%;
+  min-width: 300px;
+  gap: 8px;
+  background-color: $background-color;
+   &:hover .card_title {
+    color: $secondary-color;
+  }
+}
+
+.card_title {
+  color: $primary-color;
+  text-align: center;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 107.143% */
+  letter-spacing: -0.653px;
+}
+.card_info {
+  color: #191919;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+}
+.image_container {
+  position: relative;
+  width: 250px;
+  height: 150px;
+}
+
+@media screen and (max-width: 768px) {
+    .card{
+        width: 100%;
+    }
+    
+}

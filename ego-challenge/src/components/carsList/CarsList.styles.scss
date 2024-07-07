@@ -8,7 +8,7 @@
   width: 100%;
   min-height: 100vh;
   gap: 20px;
-  padding: 40px 10px;
+  padding: 40px 150px;
   background-color: $background-color;
 }
 
@@ -19,11 +19,28 @@
   font-weight: 700;
   line-height: 44px;
   letter-spacing: -0.7px;
+  width: 100%;
+  text-align: left;
 }
 
-.filters_container{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.filters_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cars_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 40px 20px;
+  }
 }
