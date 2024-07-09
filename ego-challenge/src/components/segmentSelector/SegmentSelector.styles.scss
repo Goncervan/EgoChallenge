@@ -1,0 +1,67 @@
+@import "../../styles/variables.scss";
+
+.segment_selector_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 70%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.segment_selector_span {
+  color: $primary-color;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.079px;
+}
+
+.segment_selector_button {
+  color: $primary-color;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.079px;
+  padding: 8px 12px;
+  background-color: transparent;
+  border: 0;
+}
+
+.segment_selector_selected_button {
+  border-radius: 18px;
+  background: #f7f7f7;
+  color: $primary-color;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.079px;
+  padding: 8px 12px;
+  border: 0px;
+}
+.segment_selector_mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .segment_selector_container {
+    display: none;
+  }
+  .segment_selector_mobile {
+    display: inline;
+    color: $primary-color;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.079px;
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 0;
+  }
+}
