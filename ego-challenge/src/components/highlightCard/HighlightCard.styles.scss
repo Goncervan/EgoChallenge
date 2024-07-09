@@ -61,5 +61,11 @@
     &:nth-child(even) {
       flex-direction: column;
     }
+    div{
+      width: 100%;
+    }
+  }
+  .highlight_image_container{
+    width: 100%;
   }
 }
