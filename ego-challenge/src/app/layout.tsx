@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./main.scss";
-import { Navbar } from "@/components/navbar/navbar";
 
 export const metadata: Metadata = {
   title: "Ego Challenge",
@@ -15,7 +14,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="body">
-        <Navbar />
         {children}
       </body>
     </html>

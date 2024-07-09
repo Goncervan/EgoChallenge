@@ -1,7 +1,13 @@
 @import "../../styles/variables.scss";
 
 .link {
-    text-decoration: none;
+  text-decoration: none;
+  display: none;
+}
+
+.card_button{
+  border: 0;
+  cursor: pointer;
 }
 
 .card {
@@ -13,13 +19,22 @@
   min-width: 300px;
   gap: 8px;
   background-color: $background-color;
-   &:hover .card_title {
+  &:hover .card_title {
     color: $secondary-color;
   }
 }
 
 .card_title {
   color: $primary-color;
+  text-align: center;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 107.143% */
+  letter-spacing: -0.653px;
+}
+.card_title_active {
+  color: $secondary-color;
   text-align: center;
   font-size: 28px;
   font-style: normal;
@@ -43,8 +58,10 @@
 }
 
 @media screen and (max-width: 768px) {
-    .card{
-        width: 100%;
-    }
-    
+  .link {
+    display: inline;
+  }
+  .card {
+    width: 100%;
+  }
 }

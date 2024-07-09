@@ -1,9 +1,8 @@
 import { carInterface } from "@/interfaces";
 import Image from "next/image";
 import React from "react";
-import "./card.styles.scss";
 import Link from "next/link";
-export const Card = ({ car }: { car: carInterface }) => {
+export const MobileCard = ({ car }: { car: carInterface }) => {
   return (
     <Link href={`/car-detail/${car.id}`} className="link">
       <div className="card">

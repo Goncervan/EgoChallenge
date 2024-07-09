@@ -1,7 +1,7 @@
 @import "../../styles/variables.scss";
 
 .nav{
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,7 +32,7 @@
   text-decoration: none;
   border-bottom: 3px solid $secondary-color;
 }
-.link {
+.nav_link {
   height: 100%;
   padding: 25px 20px 0px 20px;
   text-decoration: none;

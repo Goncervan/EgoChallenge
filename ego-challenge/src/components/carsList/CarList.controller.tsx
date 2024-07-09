@@ -1,6 +1,6 @@
 import { carInterface, segments } from "@/interfaces";
 import { carsService } from "@/services/cars.service";
-import { ChangeEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const useCarListController = () => {
   const [cars, setCars] = useState<carInterface[]>([]);
@@ -79,6 +79,12 @@ export const useCarListController = () => {
     handleFilterCars();
   }, [SelectedSegment, currentOrder]);
 
+  const [activeCarId, setActiveCarId] = useState(0);
+
+  const onDetailClick = () => {
+    // (`/car-detail/${activeCarId}`);
+  }
+
   return {
     filteredCars,
     handleChangeSegment,
@@ -86,5 +92,9 @@ export const useCarListController = () => {
     segments,
     SelectedSegment,
     orders,
+
+    onDetailClick,
+    activeCarId,
+    setActiveCarId
   };
 };

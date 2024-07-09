@@ -4,10 +4,14 @@ import { useCarDetailController } from "./carDetail.controller";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { CarDetail } from "@/components/carDetail/CarDetail";
+import { Navbar } from "@/components/navbar/navbar";
 const Page = () => {
   const controller = useCarDetailController();
   return (
-   <CarDetail carDetail={controller.carDetail}/>
+    <>
+      <Navbar />
+      <CarDetail carDetail={controller.carDetail} />
+    </>
   );
 };
 

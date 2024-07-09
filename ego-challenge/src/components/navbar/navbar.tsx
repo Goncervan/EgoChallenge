@@ -6,7 +6,7 @@ import { EgoIcon } from "../icons/EgoIcon";
 import { usePathname } from "next/navigation";
 import { MenuIcon } from "../icons/MenuIcon";
 import { Menu } from "../menu/Menu";
-export const Navbar = () => {
+export const Navbar = ({activeCarId}:{activeCarId?:number}) => {
   const pathname = usePathname();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,14 +19,14 @@ export const Navbar = () => {
       <div className="left_container">
         <EgoIcon />
         <div className="links_container">
-          <Link className={pathname === "/" ? "active_link" : "link"} href="/">
+          <Link className={pathname === "/" ? "active_link" : "nav_link"} href="/">
             Modelos
           </Link>
           <Link
             className={
-              pathname.includes("/car-detail") ? "active_link" : "link"
+              pathname?.includes("/car-detail") ? "active_link" : "nav_link"
             }
-            href="/car-detail"
+            href={activeCarId ? `/car-detail/${activeCarId}` : pathname ?? "/"}
           >
             Ficha de modelo
           </Link>
