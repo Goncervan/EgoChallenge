@@ -15,17 +15,20 @@ export const CarDetail = ({ carDetail }: { carDetail: carDetailInterface }) => {
 
   return (
     <div className="container">
-      <div className="image_container">
-        <Image
-          src={carDetail?.photo}
-          alt={carDetail?.title}
-          fill
-          objectFit="contain"
-        />
+      <div className="principal_container">
+        <div className="image_container">
+          <Image
+            src={carDetail?.photo}
+            alt={carDetail?.title}
+            fill
+          />
+        </div>
+        <div className="info_container">
+          <h1 className="name">{carDetail?.name}</h1>
+          <h2 className="title">{carDetail?.title}</h2>
+          <p className="description">{stripHtmlTags(carDetail?.description)}</p>
+        </div>
       </div>
-      <h1 className="name">{carDetail?.name}</h1>
-      <h2 className="title">{carDetail?.title}</h2>
-      <p className="description">{stripHtmlTags(carDetail?.description)}</p>
       <div className="slider_container">
         <Flicking
           hideBeforeInit
