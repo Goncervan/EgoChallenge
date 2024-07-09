@@ -20,7 +20,7 @@ interface carDetailFeature {
   image: string;
 }
 interface carDetailHighlight {
-  name: string;
+  title: string;
   content: string;
   image: string;
 }
