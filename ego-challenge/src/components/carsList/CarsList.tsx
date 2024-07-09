@@ -5,6 +5,7 @@ import { useCarListController } from "./CarList.controller";
 import { Card } from "../carCard/Card";
 import { segments } from "@/interfaces";
 import { SegmentSelector } from "../segmentSelector/SegmentSelector";
+import { OrderSelector } from "../orderSelector/OrderSelector";
 export const CarsList = () => {
   const controller = useCarListController();
 
@@ -28,17 +29,10 @@ export const CarsList = () => {
           handleSelectSegment={controller.handleChangeSegment}
           selectedOption={controller.SelectedSegment}
         />
-        <select
-          onChange={(e) =>
-            controller.handleChangeOrder(e.target.value as string)
-          }
-        >
-          <option value="">Ordenar por</option>
-          <option value="price-asc">Menor precio</option>
-          <option value="price-desc">Mayor precio</option>
-          <option value="year-asc">Menor año</option>
-          <option value="year-desc">Mayor año</option>
-        </select>
+        <OrderSelector
+          handleSelectOrder={controller.handleChangeOrder}
+          options={controller.orders}
+        />
       </div>
       <div className="cars_container">
         {controller.filteredCars?.map((car) => (

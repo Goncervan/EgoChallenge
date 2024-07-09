@@ -18,6 +18,30 @@ export const useCarListController = () => {
   const segments = ["SUVs", "Pickups y Comerciales", "Hatchback", "Sedan"];
 
   const [SelectedSegment, setSelectedSegment] = useState<segments>("");
+
+  const orders = [
+    {
+      value: "",
+      label: "Ninguno",
+    },
+    {
+      value: "price-asc",
+      label: "Menor precio",
+    },
+    {
+      value: "price-desc",
+      label: "Mayor precio",
+    },
+    {
+      value: "year-asc",
+      label: "Menor año",
+    },
+    {
+      value: "year-desc",
+      label: "Mayor año",
+    },
+  ];
+
   const [currentOrder, setCurrentOrder] = useState("");
 
   const handleChangeSegment = (value: segments) => {
@@ -61,5 +85,6 @@ export const useCarListController = () => {
     handleChangeOrder,
     segments,
     SelectedSegment,
+    orders,
   };
 };

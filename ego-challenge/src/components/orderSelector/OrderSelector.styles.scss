@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+
+ .order_selector {
+    display: inline;
+    color: $primary-color;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.079px;
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 0;
+  }
